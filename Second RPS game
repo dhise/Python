@@ -1,0 +1,34 @@
+#Thought of this while brushing my teeth immediately after making the first one. Instead of actually having the pc choose Rock paper or scissors it's just a roll
+#- of the dice to determine if you win, draw, or lose. The only thing is I'm not sure how I can get it to respond with what it chose since technically
+#- it isn't choosing anything here. 
+
+import random
+import time
+#Rock = 1 Scissors = 2 Paper = 3
+
+
+
+def game():
+    won = False
+    while won == False:
+        pc_guess = random.randint(1,3)
+        player_guess = input('Rock paper scissors ')
+        if pc_guess == 1:
+            print(f'You chose {player_guess}')
+            time.sleep(2)
+            print(f'We draw because I chose {player_guess}')
+            player_guess = ''
+        elif pc_guess == 2:
+            print(f'You chose {player_guess}')
+            time.sleep(2)
+            print(f'You lost dude! I chose what ever beats your thing')
+            player_guess = ''
+        else:
+            print(f'You chose {player_guess}')
+            time.sleep(2)
+            print('You won')
+            won = True
+            break
+
+
+game()
