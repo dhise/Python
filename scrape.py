@@ -1,3 +1,5 @@
+#Webscraper for specific website that pulls only posts with a certain amount of upvotes
+
 import requests
 from bs4 import BeautifulSoup
 import pprint
