@@ -1,3 +1,5 @@
+#Script to take text from a file, translate it, and store it in a new file. 
+
 from googletrans import Translator
 translator = Translator()
 
