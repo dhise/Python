@@ -1,0 +1,33 @@
+import random as r
+
+def game():
+    number = r.randint(1,10)
+    guess = 0
+    guesses = 0
+    while guesses < 6:
+        print('Enter a number')
+        guess = int(input())
+        if guess < number:
+            print('Your guess is too low')
+            guesses += 1
+        elif guess > number:
+            print('Your guess is too high')
+            guesses += 1
+        else:
+            guesses += 1
+            print('You won!')
+            print(f'You got it in {guesses} guesses!')
+            return
+    print('You took too many guesses')
+    
+
+def gameplay():
+    playing = True
+    while playing:
+        game()
+        print('Do you want to keep playing?')
+        question = input('')
+        if question == 'No':
+            playing = False
+
+gameplay()
