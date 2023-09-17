@@ -1,3 +1,5 @@
+#Another guessing game but guesses and inputs are entered when the script is called to run in terminal 
+
 import sys
 import random
 
